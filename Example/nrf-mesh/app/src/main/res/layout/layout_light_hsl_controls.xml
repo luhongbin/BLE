@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white"
+        app:cardElevation="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/node_controls_tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:logo="@drawable/ic_subscribe_black_alpha_24dp"
+                app:title="@string/title_light_hsl_controls"
+                app:titleMarginStart="@dimen/toolbar_title_margin"
+                app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_controls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/node_controls_tool_bar"
+                tools:visibility="visible">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+                    <com.larswerkman.holocolorpicker.ColorPicker
+                        android:id="@+id/colorpicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"/>
+                    <com.larswerkman.holocolorpicker.SVBar
+                        android:id="@+id/svbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/colorpicker"/>
+
+                    <com.larswerkman.holocolorpicker.OpacityBar
+                        android:id="@+id/opacitybar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/svbar"/>
+
+
+                 <TextView
+                    android:id="@+id/light_hue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:gravity="start"
+                    android:paddingStart="@dimen/item_padding_start"
+                    android:paddingEnd="@dimen/item_padding_end"
+                    android:text="@string/light_hue"
+                    android:textSize="18sp"
+
+                    app:layout_constraintStart_toStartOf="@id/opacitybar"
+                    app:layout_constraintTop_toBottomOf="@id/opacitybar" />
+
+                    <TextView
+                        android:id="@+id/hue_levl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:gravity="end"
+                        android:paddingStart="@dimen/item_padding_start"
+                        android:paddingEnd="@dimen/item_padding_end"
+                        android:text="0 &#xb0;"
+                        android:textSize="18sp"
+
+                        app:layout_constraintEnd_toEndOf="@id/hue_seekbar"
+                        app:layout_constraintStart_toStartOf="@id/hue_seekbar"
+                        app:layout_constraintTop_toTopOf="@id/light_hue"
+                        tools:ignore="HardcodedText" />
+
+                    <SeekBar
+                        android:id="@+id/hue_seekbar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/light_hue" />
+
+                    <TextView
+                        android:id="@+id/light_saturation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:gravity="start"
+                        android:paddingStart="@dimen/item_padding_start"
+                        android:paddingEnd="@dimen/item_padding_end"
+                        android:text="@string/light_saturation"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@id/hue_seekbar"
+                        app:layout_constraintTop_toBottomOf="@id/hue_seekbar" />
+
+                    <TextView
+                        android:id="@+id/saturation_levl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:gravity="end"
+                        android:paddingStart="@dimen/item_padding_start"
+                        android:paddingEnd="@dimen/item_padding_end"
+                        android:text="0 %"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="@id/hue_seekbar"
+                        app:layout_constraintStart_toStartOf="@id/sat_seekbar"
+                        app:layout_constraintTop_toBottomOf="@id/hue_seekbar"
+                        tools:ignore="HardcodedText" />
+
+                    <SeekBar
+                        android:id="@+id/sat_seekbar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/light_saturation" />
+
+                    <TextView
+                        android:id="@+id/light_lightness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:gravity="start"
+                        android:paddingStart="@dimen/item_padding_start"
+                        android:paddingEnd="@dimen/item_padding_end"
+                        android:text="@string/light_lightness"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@id/sat_seekbar"
+                        app:layout_constraintTop_toBottomOf="@id/sat_seekbar" />
+
+                    <TextView
+                        android:id="@+id/lightness_levl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:gravity="end"
+                        android:paddingStart="@dimen/item_padding_start"
+                        android:paddingEnd="@dimen/item_padding_end"
+                        android:text="0 %"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="@id/sat_seekbar"
+                        app:layout_constraintStart_toStartOf="@id/sat_seekbar"
+                        app:layout_constraintTop_toBottomOf="@id/sat_seekbar"
+                        tools:ignore="HardcodedText" />
+
+                    <SeekBar
+                        android:id="@+id/lig_seekbar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/light_lightness" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_red"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginEnd="@dimen/item_padding_end"
+                        android:padding="@dimen/item_padding_start"
+                        android:text="红"
+                        android:textColor="@color/nordicRed"
+                        app:layout_constraintBottom_toBottomOf="@id/button_green"
+                        app:layout_constraintEnd_toStartOf="@id/button_green"
+                        app:layout_constraintTop_toTopOf="@id/button_green" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_green"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginEnd="@dimen/item_padding_end"
+                        android:padding="@dimen/item_padding_start"
+                        android:text="绿"
+                        android:textColor="@color/colorPrimaryDark"
+                        app:layout_constraintBottom_toBottomOf="@id/button_blue"
+                        app:layout_constraintEnd_toStartOf="@id/button_blue"
+                        app:layout_constraintTop_toTopOf="@id/button_blue" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginEnd="@dimen/item_padding_end"
+                        android:padding="@dimen/item_padding_start"
+                        android:text="蓝"
+                        android:textColor="@color/nordicBlue"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/lig_seekbar" />
+                </RelativeLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <include
+                android:id="@+id/div3"
+                layout="@layout/layout_divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/container_controls" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/action_read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="@dimen/item_padding_start"
+                android:padding="@dimen/item_padding_end"
+                android:text="@string/action_generic_read_state"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/div3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

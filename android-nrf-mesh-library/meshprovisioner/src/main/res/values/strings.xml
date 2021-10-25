@@ -1,0 +1,49 @@
+<!--
+  ~ Copyright (c) 2018, Nordic Semiconductor
+  ~ All rights reserved.
+  ~
+  ~ Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  ~
+  ~ 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  ~
+  ~ 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the
+  ~ documentation and/or other materials provided with the distribution.
+  ~
+  ~ 3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this
+  ~ software without specific prior written permission.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  ~ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  ~ HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  ~ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+  ~ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+  ~ USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  -->
+
+<resources>
+    <string name="app_name">Android-Mesh-Provisioner-Library</string>
+
+    <string name="error_empty_pin">Error, pin cannot be empty!</string>
+
+    <string name="error_empty_network_key">Network key cannot be empty!</string>
+
+    <string name="error_empty_key_index">Key index cannot be empty!</string>
+    <string name="error_invalid_key_index">Key index must be 0 to 4095!</string>
+
+    <string name="error_empty_iv_index">IV Index cannot be empty!</string>
+    <string name="error_invalid_iv_index">IV Index must be 0 to 4294967295!</string>
+
+    <string name="error_empty_unicast_address">Unicast Address cannot be empty!</string>
+
+    <string name="error_empty_app_key">App key cannot be empty!</string>
+
+    <string name="error_prohibited">Prohibited!</string>
+    <string name="error_invalid_pdu">The provisioning protocol PDU is not recognized by the device!</string>
+    <string name="error_invalid_format">The arguments of the protocol PDUs are outside expected values or the length of the PDU is different than expected!</string>
+    <string name="error_confirmation_failed">The computed confirmation value was not successfully verified!</string>
+    <string name="error_decryption_failed">The Data block was not successfully decrypted!</string>
+    <string name="error_unexpected_error">An unexpected error occurred that may not be recoverable!</string>
+    <string name="error_cannot_assign_addresses">The device cannot assign consecutive unicast addresses to all elements!</string>
+    <string name="error_rfu">Reserved for Future Use!</string>
+
+</resources>

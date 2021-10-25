@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".keys.NetKeysActivity"
+    tools:ignore="ContentDescription">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+            <ProgressBar
+                android:id="@+id/pb_prog"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-8dp"
+                android:layout_marginBottom="-7dp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/white"
+                android:visibility="invisible"
+                tools:ignore="UnusedAttribute"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:id="@+id/scroll_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/network_recycler_view_bottom_padding">
+
+                <!--<androidx.cardview.widget.CardView
+                    android:id="@+id/cv_firmware"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:background="@color/white"
+                    app:cardElevation="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.Toolbar
+                            android:id="@+id/tb_file_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="?actionBarSize"
+                            app:logo="@drawable/ic_shield_key_black_alpha_24dp"
+                            app:title="@string/title_firmware"
+                            app:titleMarginStart="@dimen/toolbar_title_margin"/>
+
+                        <include
+                            android:id="@+id/container_file"
+                            layout="@layout/layout_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <include
+                            android:id="@+id/container_type"
+                            layout="@layout/layout_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <include
+                            android:id="@+id/container_size"
+                            layout="@layout/layout_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <include
+                            android:id="@+id/div1"
+                            layout="@layout/layout_divider"
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/bt_load"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center"
+                            android:layout_marginStart="@dimen/item_padding_end"
+                            android:layout_marginEnd="@dimen/item_padding_start"
+                            android:padding="@dimen/item_padding_end"
+                            android:text="@string/acti_load_file"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>-->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_node"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    app:cardElevation="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.Toolbar
+                            android:id="@+id/tb_devi_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="?actionBarSize"
+                            app:logo="@drawable/ic_shield_key_black_alpha_24dp"
+                            app:title="@string/title_device"
+                            app:titleMarginStart="@dimen/toolbar_title_margin"/>
+
+                        <include
+                            android:id="@+id/container_devi"
+                            layout="@layout/layout_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <include
+                            android:id="@+id/container_addr"
+                            layout="@layout/layout_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <include
+                            android:id="@+id/div2"
+                            layout="@layout/layout_divider"
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/bt_slct"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center"
+                            android:layout_marginStart="@dimen/item_padding_end"
+                            android:layout_marginEnd="@dimen/item_padding_start"
+                            android:padding="@dimen/item_padding_end"
+                            android:text="@string/acti_slct_devi"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:text="@string/acti_upda_devi"
+        app:elevation="@dimen/fab_elevation"
+        app:fabSize="normal"
+        app:icon="@drawable/ic_add_white"
+        app:srcCompat="@drawable/ic_add_white"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,609 @@
+<!--
+  ~ Copyright (c) 2018, Nordic Semiconductor
+  ~ All rights reserved.
+  ~
+  ~ Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  ~
+  ~ 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  ~
+  ~ 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the
+  ~ documentation and/or other materials provided with the distribution.
+  ~
+  ~ 3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this
+  ~ software without specific prior written permission.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  ~ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  ~ HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  ~ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+  ~ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+  ~ USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  -->
+
+<resources>
+    <string name="app_name">乐泰客</string>
+    <string name="feature_name">Mesh无线网格网络</string>
+    <string name="title_scanner">搜索</string>
+    <string name="sub_title_scanning_nodes">查找新的未配置的代理节点…</string>
+    <string name="sub_title_scanning_proxy_node">查找已经配置的节点设备…</string>
+
+    <string name="unknown_device">未知设备</string>
+    <string name="state">开 关 状态:</string>
+    <string name="button_unknown">未知</string>
+
+    <string name="location_permission_title">位置所需权限</string>
+    <string name="location_permission_info">从android6.0 marshullow开始，应用程序需要位置许可才能扫描蓝牙低能耗设备.
+      \n\n这是因为Bluetooth LE信标（例如iBeacons或Eddystone）可用于确定手机 \'s 用户\'s 的位置.
+        <b>LUTEC Mesh 配置</b> 不会以任何方式使用此信息.</string>
+    <string name="location_permission_action">授权</string>
+    <string name="location_permission_settings">设置定位权限</string>
+
+    <string name="bluetooth_disabled_title">蓝牙功能未开启</string>
+    <string name="bluetooth_disabled_info">蓝牙功能已被关闭， 请点击按钮打开蓝牙。</string>
+    <string name="bluetooth_disabled_action">打开蓝牙</string>
+
+    <string name="unprovisioned_node_guide_title">找不到您的节点?</string>
+    <string name="unprovisioned_node_guide_info">1. 请确认您的设备电源是否<b>打开</b> 正常.
+        \n\n2. 请确认 <b>相关的</b> 固件和软硬件是否相配.</string>
+    <string name="unprovisioned_node_guide_location_info">3. 定位功能关闭，一些安卓手机在蓝牙搜索时需要打开定位功能，
+		假如您确认您的节点设备正在工作但不被发现, 请点击按钮打开定位权限。</string>
+    <string name="unprovisioned_node_guide_location_action">打开定位</string>
+
+    <string name="state_connecting">正在连接…</string>
+
+    <string name="yes">是</string>
+    <string name="no">否</string>
+
+    <string name="confirm">配置</string>
+    <string name="cancel">取消</string>
+
+    <!--Output oob actions-->
+    <string name="beep">响声</string>
+    <string name="blink">闪烁</string>
+    <string name="vibrate">振动</string>
+    <string name="output_numeric">输出数值</string>
+    <string name="output_alphanumeric">输出字母数字</string>
+
+    <!--Input oob actions-->
+    <string name="push">推送</string>
+    <string name="input_numeric">输入数字</string>
+    <string name="input_alphanumeric">输入字母</string>
+    <string name="title_select_output_oob">选择输出OOB操作</string>
+    <string name="title_select_input_oob">选择输入OOB操作</string>
+    <string name="hint_static_oob">e.g. 00112233445566778899001122334455</string>
+    <string name="hint_numeric_action">e.g. 5</string>
+    <string name="hint_numeric">e.g. 019655</string>
+    <string name="hint_alpha_numeric">e.g. 123ABC</string>
+    <string name="error_empty_pin">错误，验证值不能为空！</string>
+    <string name="error_invalid_static_oob">错误，静态oob值必须是128位!</string>
+
+    <string name="title_select_oob">选择 OOB 类型</string>
+    <string name="public_key_information_available">可用的公钥信息</string>
+    <string name="public_key_information_unavailable">公钥信息不可用</string>
+    <string name="static_oob_information_available">可用的静态OOB信息</string>
+    <string name="static_oob_information_unavailable">静态OOB信息不可用</string>
+    <string name="output_oob_actions_unavailable">输出OOB操作不可用</string>
+    <string name="input_oob_actions_unavailable">输入OOB操作不可用</string>
+
+    <string name="sending_prov_invite">正在发送设置邀请…</string>
+
+    <string name="provision_action">配置动作</string>
+    <string name="identify_action">ID </string>
+
+    <string name="ok">OK</string>
+
+    <string name="title_node_details">节点详细说明</string>
+    <string name="node_name">名字</string>
+    <string name="node_prov_timestamp">预分配时间</string>
+    <string name="node_identifier">节点 ID</string>
+    <string name="node_unicast_address">单播地址</string>
+    <string name="node_company_identifier">公司 ID</string>
+    <string name="node_product_identifier">产品 ID</string>
+    <string name="node_product_version">产品版本号</string>
+    <string name="node_replay_protection_count">中继 计数</string>
+    <string name="node_features">节点角色</string>
+
+    <string name="title_elements">元素</string>
+    <string name="title_node_element_details">元素详细说明</string>
+
+    <string name="generate_new_key">生成密钥</string>
+
+    <string name="title_network_name">Mesh子网名称</string>
+    <string name="summary_network_name">输入网络名称</string>
+    <string name="hint_global_network_name">Mesh子网名称</string>
+
+    <string name="title_allocated_ranges">分配范围</string>
+    <string name="not_allocated">没有分配</string>
+    <string name="allocated_to_this">分配给这个配置器</string>
+    <string name="allocated_to_another">分配给另一个配置器</string>
+    <string name="conflicting_with_another">与另一个配置器冲突</string>
+
+    <string name="title_range">范围</string>
+    <string name="range_deleted">删除的范围.</string>
+    <string name="title_no_ranges">未分配范围</string>
+    <string name="title_edit_unicast_ranges">编辑单播范围</string>
+    <string name="title_edit_group_ranges">编辑群组范围</string>
+    <string name="title_edit_scene_ranges">编辑场景范围</string>
+    <string name="unicast_range_summary">以4个字符的十六进制字符串形式输入下限和上限.\n有效范围: 0x0001 – 0x7FFF</string>
+    <string name="group_range_summary">以4个字符的十六进制字符串形式输入下限和上限.\n有效范围: 0xC000 – 0xFEFF</string>
+    <string name="scene_range_summary">以4个字符的十六进制字符串形式输入下限和上限.\n有效范围: 0x0001 – 0xFFFF</string>
+
+    <string name="title_provisioners">配置器</string>
+    <string name="title_provisioner">配置器</string>
+    <string name="provisioner_deleted">配置器已删除.</string>
+    <string name="title_provisioner_address">配置器地址</string>
+    <string name="action_add_range">添加范围</string>
+    <string name="range_adapter_format"> %s - %s</string>
+    <string name="low_address">低地址</string>
+    <string name="high_address">高地址</string>
+    <string name="provisioner_name_rationale">这是一个友好的名称，可用于标识配置器.</string>
+    <string name="title_provisioner_name">配置器名称</string>
+    <string name="title_current_provisioner">当前配置器</string>
+    <string name="title_other_provisioner">其他配置器</string>
+    <string name="title_manage_provisioners">管理配置器</string>
+    <string name="title_add_provisioner">新增配置器</string>
+    <string name="title_edit_provisioner">编辑配置器</string>
+    <string name="hint_delete_provisioner">提示：轻扫可删除配置器.</string>
+    <string name="provisioner_authentication_title">验证</string>
+    <string name="provisioner_input_static_oob">输入设备提供的128位静态oob值.</string>
+    <string name="provisioner_input_blinks">输入设备闪烁的次数.</string>
+    <string name="provisioner_input_beeps">输入设备发出哔哔声的次数.</string>
+    <string name="provisioner_input_vibrations">输入设备振动的次数.</string>
+    <string name="provisioner_input_numeric">输入设备上显示的代码.</string>
+    <string name="provisioner_input_numeric_device">在设备上输入以下代码.</string>
+
+    <string name="dialog_summary_src">十六进制值范围 0x0001 – 0x7FFF.</string>
+
+    <string name="network_settings">Mesh网络设置</string>
+    <string name="title_net_keys">网络密钥</string>
+    <string name="unicast_address">单播地址: %s</string>
+    <string name="unicast_address_unassigned">单播地址: 未分配</string>
+
+    <string name="title_node_name">节点名称</string>
+    <string name="summary_name">名称</string>
+    <string name="node_name_rationale">这是一个用于标识节点的友好名称.</string>
+    <string name="title_element_name">元素名</string>
+    <string name="element_name_rationale">这是一个用于标识元素的友好名称.</string>
+    <string name="hint_friendly_name">友好名称</string>
+
+    <string name="title_primary_net_key">主网络密钥</string>
+    <string name="title_sub_net_keys">子网密钥</string>
+    <string name="hint_network_key">网络密钥</string>
+    <string name="generate_network_key">生成密钥</string>
+    <string name="error_empty_network_key">网络密钥不能为空!</string>
+
+    <string name="title_key_index">键索引</string>
+    <string name="error_empty_key_index">键索引不能为空!</string>
+    <string name="error_invalid_key_index">键索引必须是 0 到 4095!</string>
+
+    <string name="error_empty_iv_index">IV 索引不能为空!</string>
+    <string name="error_invalid_iv_index">IV 索引必须是 0 到 4294967295!</string>
+
+    <string name="title_unicast_address">单播地址</string>
+    <string name="dialog_summary_unicast_address">输入节点的单播地址.</string>
+    <string name="title_unicast_addresses">单播地址</string>
+    <string name="title_group_addresses">群组地址</string>
+    <string name="title_scenes">场景</string>
+    <string name="hint_unicast_address">单播地址</string>
+    <string name="error_empty_unicast_address">地址不能为空!</string>
+    <string name="network">Mesh网络</string>
+    <string name="action_groups">组群</string>
+    <string name="action_proxy">代理节点处理</string>
+    <string name="action_settings">设置</string>
+    <string name="no_nodes_provisioned_title">暂时没有节点设备</string>
+    <string name="no_nodes_provisioned_rationale">请点击添加按钮添加一个网格节点.</string>
+
+    <string name="no_groups_configured_title">没有配置群组</string>
+    <string name="no_groups_configured_rationale">创建一个组来控制您的设备。此处列出的所有组都可以从模型中订阅.</string>
+    <string name="group_address_summary">地址: %s</string>
+    <string name="title_edit_group_info">编辑群组</string>
+    <string name="select_a_group_rationale">选择一个存在的组</string>
+    <string name="no_available_groups">没有可用的组.</string>
+    <string name="create_a_group_rationale">创建要订阅的新组</string>
+    <string name="title_create_group">创建组</string>
+    <string name="title_create_group_summary">选择地址类型以创建组</string>
+    <string name="title_subscribe_group">订阅</string>
+    <string name="error_empty_group_name">组名不能为空!</string>
+    <string name="error_empty_group_address">组地址不能为空!</string>
+    <string name="error_group_address_in_used">组地址已在使用!</string>
+    <string name="error_group_unsubscribe_to_delete">请从该组中取消订阅模型，以便删除该组!</string>
+    <string name="group_deleted">群组 %s 已删除!</string>
+    <string name="no_models_configured_title">没有配置模块</string>
+    <string name="no_models_configured_rationale">此组未订阅任何模块.</string>
+    <string name="no_app_key_configured_title">没有绑定APP密钥</string>
+    <string name="no_app_key_configured_rationale">此组的模块未绑定APP密钥. \n请绑定APP密钥.</string>
+
+    <string name="title_manage_net_keys">管理网络密钥</string>
+    <string name="title_net_key">网络密钥</string>
+    <string name="title_add_net_key">增加网络密钥</string>
+    <string name="title_edit_net_key">编辑网络密钥</string>
+    <string name="title_manage_app_keys">管理APP密钥</string>
+    <string name="title_app_key">APP密钥</string>
+    <string name="title_app_keys">APP密钥组</string>
+    <string name="title_key_details">密钥说明</string>
+    <string name="title_add_app_key">增加App密钥</string>
+    <string name="title_edit_app_key">编辑 App 密钥</string>
+    <string name="title_bound_net_key">绑定网络密钥</string>
+    <string name="summary_edit_key">密钥必须是32个字符的十六进制字符串.</string>
+    <string name="title_edit_key">编辑密钥</string>
+    <string name="title_edit_key_name">编辑密钥名</string>
+    <string name="key_name_rationale">这是一个好友节点的名称，可以用来标识密钥.</string>
+    <string name="title_select_app_key">选择应用程序密钥</string>
+    <string name="title_select_net_key">选择网络密钥</string>
+    <string name="hint_app_key">App 密钥</string>
+    <string name="no_app_keys_title">没有可用的应用程序密钥</string>
+    <string name="no_app_keys_rationale">配置网格节点需要应用程序密钥,
+        请在网络设置中添加App密钥.</string>
+    <string name="no_added_app_keys_rationale">将应用程序密钥绑定到模型需要将其添加到已配置的网格节点.
+        导航回节点配置视图添加新的应用程序密钥</string>
+    <string name="net_key_deleted">网络密钥已删除.</string>
+    <string name="app_key_deleted">应用程序密钥已删除.</string>
+    <string name="undo">撤消</string>
+    <string name="title_error_provisioning_failed">设置失败</string>
+    <string name="provisioning_cancelled">设置已取消!</string>
+
+    <string name="nrf_mesh_node">nRF 网格节点</string>
+    <string name="company">公司:</string>
+    <string name="nordic_semiconductor_asa">宁波耀泰电器有限公司</string>
+    <string name="elements">元素:</string>
+    <string name="models">模型</string>
+    <string name="groups">群组:</string>
+
+    <string name="title_appkey_status">AppKey 状态</string>
+    <string name="title_netkey_status">NetKey 状态</string>
+    <string name="error_empty_name">名称不能为空!</string>
+    <string name="element_address">元素: %s</string>
+    <string name="model_count">%d 个型号</string>
+    <string name="format_sig_model_id">SIG 模型 ID: %s</string>
+    <string name="format_vendor_model_id">供应商模型 ID: %s</string>
+
+    <string name="title_publish_address">发布地址</string>
+    <string name="none">无</string>
+    <string name="no_app_keys_bound">没有应用程序密钥绑定到此模型.</string>
+    <string name="title_publish_address_configuration">发布</string>
+    <string name="title_subscription_addresses_configuration">订阅</string>
+    <string name="action_bind_app_key">绑定键</string>
+    <string name="action_unbind_app_key">取消绑定键</string>
+    <string name="action_set_publish_address">设置发布</string>
+    <string name="action_clear_publication">清除发布</string>
+    <string name="action_subscribe_address">订阅</string>
+    <string name="title_app_key_index">键索引</string>
+    <string name="title_bound_app_keys">绑定的应用程序密钥</string>
+
+    <string name="no_elements_guide_info">未找到任何元素! \n\n请再次尝试配置节点，以查看此节点上有哪些元素可用。您可以返回主屏幕并连接到节点.</string>
+    <string name="no_elements_guide_composition_data">未找到任何元素! \n获取合成数据以查看此节点上有哪些元素.</string>
+    <string name="action_connect">连接</string>
+    <string name="action_disconnect">断开连接</string>
+
+    <string name="hint_publish_address">发布 地址</string>
+    <string name="error_empty_publish_address">发布地址不能为空!</string>
+    <string name="title_publication_status">发布状态</string>
+    <string name="hex_format">0x%s</string>
+    <string name="hex_prefix">0x</string>
+    <string name="invalid_hex_value">无效的十六进制值</string>
+    <string name="invalid_address_value">无效地址</string>
+    <string name="invalid_unicast_address">单播地址的范围必须 0x0001 到 0x7FFF</string>
+    <string name="invalid_group_address">群组地址的范围必须 0xC000 到 0xFEFF</string>
+    <string name="action_reset_network">复位</string>
+    <string name="title_reset_network">重置网状网络</string>
+    <string name="message_reset_network">这将清除存储的与此网络相关的所有数据，并且不可恢复。你想继续吗?</string>
+    <string name="not_subscribed_to_groups">未订阅任何组地址.</string>
+    <string name="title_group_address">组地址</string>
+    <string name="title_configuration_compete">配置完成</string>
+    <string name="configuration_complete_summary">已成功配置Mesh节点.</string>
+    <string name="action_composition_data">获取合成数据</string>
+
+    <string name="action_add">增加</string>
+    <string name="action_clear">清除</string>
+    <string name="title_about">关于</string>
+    <string name="summary_version">App 版本号</string>
+    <string name="title_node_configuration">节点配置</string>
+    <string name="title_added_net_keys">添加网络密钥</string>
+    <string name="title_added_app_keys">添加 App 密钥</string>
+    <string name="title_added_keys">添加密钥</string>
+    <string name="title_keys">密钥组</string>
+    <string name="title_key">密钥</string>
+
+    <string name="title_network_transmit_info">网络传输</string>
+    <string name="title_network_transmit">网络传输设置</string>
+    <string name="title_network_transmit_count">传输计数</string>
+    <string name="title_network_transmit_interval">传输间隔</string>
+    <string name="title_network_transmit_interval_steps">传输每步间隔</string>
+    <string name="action_network_transmit_get">读取状态</string>
+    <string name="action_network_transmit_set">设置网络传输</string>
+    <string name="time_ms">%d 毫秒</string>
+    <string name="time_s">%d 秒</string>
+    <string name="time_m">%d 分钟</string>
+
+    <string name="title_relay_retransmit_info">中继</string>
+    <string name="title_relay_retransmit">中继设置</string>
+    <string name="title_relay_state">中继</string>
+    <string name="title_relay_retransmit_count">重传计数</string>
+    <string name="title_relay_retransmit_interval">重传间隔</string>
+    <string name="title_relay_retransmit_interval_steps">重传间隔步骤</string>
+    <string name="action_relay_retransmit_set">设置中继</string>
+
+    <string name="title_proxy_state_settings">代理状态</string>
+    <string name="action_proxy_state_set_on">ON</string>
+    <string name="action_proxy_state_set_off">OFF</string>
+    <string name="action_proxy_state_get">读取状态</string>
+    <string name="proxy_set_on_rationale">启用代理功能会将此节点设置为可连接状态并启用代理服务器.</string>
+    <string name="proxy_set_on_rationale_summary">启用代理功能会将此节点设置为可连接状态并启用代理服务器.您还可以连接到这个节点，并通过GATT发送mesh消息。你想继续吗?</string>
+    <string name="proxy_set_off_rationale">关闭代理功能会将此节点设置为不可连接状态并禁用代理服务器.</string>
+    <string name="proxy_set_off_rationale_summary">关闭代理功能会将此节点设置为不可连接状态并禁用代理服务器.
+        但是，您仍然可以通过网络中的其他代理节点继续发送消息。你想继续吗?</string>
+
+    <string name="title_proxy_filter">代理过滤器类型</string>
+    <string name="title_filter_addresses">过滤器地址</string>
+    <string name="white_list_filter">白名单</string>
+    <string name="black_list_filter">黑名单</string>
+    <string name="proxy_filter_summary">代理过滤器可用于监视通过mesh网络发送的mesh消息。.
+        \n\n白名单筛选器将阻止除已添加到白名单中的目标地址以外的所有目标地址.
+        \n\n黑名单筛选器接受除已添加到黑名单中的地址以外的所有目标地址.</string>
+
+    <string name="action_disable">禁用</string>
+    <string name="disabled">禁用</string>
+    <string name="hint_remove">提示：滑动地址以删除.</string>
+    <string name="hint_filter_address">单播/组地址</string>
+    <string name="no_addresses_added">没有向此筛选器添加地址!</string>
+    <string name="title_add_address">添加地址</string>
+    <string name="address">地址</string>
+    <string name="dialog_summary_filter_address">要添加到 %s 的地址。支持的地址是单播、组或虚拟地址.</string>
+    <string name="invalid_filter_address">地址必须是单播、组或虚拟地址!</string>
+    <string name="error_empty_filter_address">至少添加一个地址进行确认!</string>
+
+    <string name="no_app_keys_added">没有向该节点添加应用程序密钥.</string>
+    <string name="error_no_app_keys_bound">此型号没有绑定应用程序密钥。请先绑定应用程序密钥!</string>
+    <string name="action_generic_read_state">读取状态</string>
+    <string name="action_generic_on">ON</string>
+    <string name="action_generic_off">OFF</string>
+    <string name="transition_time_interval" formatted="false">%s %s</string>
+    <string name="hint_unsubscribe">提示：滑动地址即可取消订阅.</string>
+    <string name="title_generic_on_off_controls">通用开关控件</string>
+    <string name="transition_time">转换时间</string>
+    <string name="generic_on_off_step_delay">延迟 (5ms步数)</string>
+    <string name="generic_state_on">LED ON</string>
+    <string name="generic_state_off">LED OFF</string>
+
+    <!-- PANDA -->
+    <string name="title_light_hsl_controls">灯 HSL 控制</string>
+    <string name="light_hue">色调</string>
+    <string name="light_saturation">饱和度</string>
+    <string name="light_lightness">亮度</string>
+    <string name="light_hue_interval" formatted="false">%s &#xb0;</string>
+    <string name="light_saturation_interval" formatted="false">%s %%</string>
+    <string name="light_lightness_interval" formatted="false">%s %%</string>
+
+    <string name="cast_type">单播</string>
+    <string name="exceed_subs_limit_rationale">超过此型号的订阅限制.</string>
+
+    <string name="title_bound_group_address">绑定组地址</string>
+    <string name="title_subsc_group_address">开关绑定</string>
+    <string name="gkey_index" formatted="false">开关 %d</string>
+    <string name="action_get_gkey">获取</string>
+
+    <string name="title_sensor_controls">传感器控件</string>
+    <string name="snsr_stat">传感器状态:</string>
+    <string name="snsr_numb" formatted="false">%d 个传感器</string>
+
+    <string name="network_management">网络管理</string>
+    <string name="title_network_sync">网络同步</string>
+    <string name="summary_network_sync">通过GATT同步网络数据</string>
+
+    <string name="device_maintenance">设备维护</string>
+    <string name="title_firmware_update">固件更新</string>
+    <string name="summary_firmware_update">通过“空中传送”更新节点固件</string>
+    <string name="summary_firmware_update_complete">节点的固件已成功更新.</string>
+    <string name="title_update_firmware">更新固件</string>
+    <string name="title_firmware">固件</string>
+    <string name="firmware_file">文件名</string>
+    <string name="firmware_type">固件类型</string>
+    <string name="firmware_size">文件大小</string>
+    <string name="acti_load_file">选择文件</string>
+
+    <string name="title_device">设备</string>
+    <string name="device_name">设备名</string>
+    <string name="device_addr">MAC 地址</string>
+    <string name="acti_slct_devi">选择设备</string>
+    <string name="acti_upda_devi">更新设备</string>
+    <string name="msgs_file_unavailable">未选择固件文件!</string>
+    <string name="msgs_devi_unavailable">未选择设备!</string>
+
+    <string name="sub_title_otas_scan">正在查找 PhyPlus 节点…</string>
+    <string name="title_prov_node">配置的节点</string>
+    <string name="title_uprv_node">未配置的节点</string>
+
+    <string name="phy_laboratory">Phy 实验室</string>
+    <string name="title_blnk_xfer_itvl">传输间隔</string>
+    <string name="title_blnk_rfer_coun">重传计数</string>
+    <string name="acti_play">播放</string>
+    <string name="acti_stop">停止</string>
+
+    <string name="title_friend_state_settings">好友状态</string>
+    <string name="action_friend_state_set_on">ON</string>
+    <string name="action_friend_state_set_off">OFF</string>
+    <string name="action_friend_state_get">读取状态</string>
+    <string name="friend_set_on_rationale">启用代理功能会将此节点设置为可连接状态并启用代理服务器.</string>
+    <string name="friend_set_on_rationale_summary">启用代理功能会将此节点设置为可连接状态并启用代理服务器.
+        您还可以连接到这个节点，并通过GATT发送mesh消息。你想继续吗?</string>
+    <string name="friend_set_off_rationale">关闭好友功能会将此节点设置为不友好状态并禁用好友服务器.</string>
+    <string name="friend_set_off_rationale_summary">关闭代理功能会将此节点设置为不可连接状态并禁用代理服务器.
+        但是，您仍然可以通过网络中的其他代理节点继续发送消息。你想继续吗?</string>
+    <!-- panda -->
+
+
+    <string name="title_reset_node">重置节点</string>
+    <string name="action_reset_node">重置</string>
+    <string name="reset_node_rationale">重置此节点为未配置初始状态.</string>
+    <string name="reset_node_rationale_summary">重置此节点为未配置初始状态. 任何与该节点相关的存储数据都将从应用程序中删除，是否继续?</string>
+
+    <string name="node_device_key">设备密钥</string>
+    <string name="device_key_clipboard_copied">设备密钥复制到剪贴板</string>
+    <string name="unavailable">不可用</string>
+    <string name="hint_unbind">提示：轻扫键解除绑定.</string>
+    <string name="hint_delete">提示：轻扫键删除.</string>
+    <string name="title_transaction_failed">交易失败</string>
+    <string name="segments_not_received_timed_out">未收到所有消息段，操作超时!</string>
+    <string name="operation_timed_out">操作超时</string>
+    <string name="element_count_title">元素计数</string>
+    <string name="supported_algorithms_title">支持的算法</string>
+    <string name="public_key_type_title">公钥类型</string>
+    <string name="static_oob_type_title">静态 OOB 类型</string>
+    <string name="output_oob_size_title">输出 OOB 大小</string>
+    <string name="supported_output_oob_actions_title">支持输出 OOB 动作</string>
+    <string name="supported_input_oob_actions_title">支持输入 OOB 动作</string>
+    <string name="input_oob_size_title">输入 OOB 大小</string>
+    <string name="unknown">不明</string>
+
+    <string name="title_vendor_model_controls">供应商模型控制</string>
+    <string name="opcode">操作码无公司 id</string>
+    <string name="parameters">参数</string>
+    <string name="received_message">接收信息:</string>
+    <string name="action_send">发送</string>
+    <string name="error_empty_value">值不能为空</string>
+    <string name="message_type">已确认消息</string>
+    <string name="enforce_vendor_op_code">0xC0 | 0x</string>
+    <string name="title_address">地址</string>
+    <string name="title_retransmission">发布重传</string>
+    <string name="title_retransmit_count">重传计数</string>
+    <string name="title_interval_steps">间隔步数</string>
+    <string name="title_publish_period">发布期</string>
+    <string name="title_publish_period_steps">步骤</string>
+    <string name="title_publication_resolution">分辨率</string>
+    <string name="title_security_credentials">安全证书</string>
+    <string name="title_friendship_credentials_flag">友谊证书标志</string>
+    <string name="title_ttl">生命周期</string>
+    <string name="title_publish_ttl">发布 TTL</string>
+    <string name="title_publication_settings">发布设置</string>
+    <string name="hint_retransmit_count">重新传输计数</string>
+    <string name="hint_publication_interval_steps">重传间隔步数</string>
+    <string name="error_empty_pub_retransmit_count">重新传输计数不能为空!</string>
+    <string name="error_invalid_pub_retransmit_count">发布-重新传输间隔步骤必须在范围 0 到 7!</string>
+    <string name="error_empty_pub_retransmit_interval_steps">发布重新传输间隔步骤不能为空!</string>
+    <string name="error_invalid_pub_retransmit_interval_steps">发布-重新传输间隔步骤必须在范围 0 到 31!</string>
+    <string name="error_empty_publication_steps">发布步骤数不能为空!</string>
+    <string name="error_invalid_publication_steps">发布期间步骤必须在范围 0 到 63!</string>
+    <string name="error_empty_ttl">TTL 不能是空值!</string>
+    <string name="error_invalid_publish_ttl">发布 TTL 值范围必须是 0 到 127!</string>
+    <string name="title_default_ttl">默认 TTL</string>
+    <string name="error_invalid_default_ttl">默认 TTL 值必须是 0 或者范围 2 – 127!</string>
+    <string name="summary_ttl">默认 ttl 值必须是 0 或者范围 0 – 127</string>
+    <string name="action_get_default_ttl">获取 TTL</string>
+    <string name="action_set_default_ttl">设置 TTL</string>
+
+    <string name="dialog_summary_retransmit_count">输入所需的重传次数.</string>
+    <string name="dialog_summary_interval_steps">输入重新传输所需的间隔步数. \n\n1 间隔时间 = 50ms</string>
+    <string name="dialog_summary_publication_steps">输入发布期间所需的步骤数.</string>
+    <string name="dialog_summary_publish_ttl">输入所需的发布.</string>
+    <string name="resolution_summary_100_ms">100 毫秒</string>
+    <string name="resolution_summary_1_s">1 秒</string>
+    <string name="resolution_summary_10_s">10 秒</string>
+    <string name="resolution_summary_100_m">10 分钟</string>
+
+    <string name="app_key_index">应用程序密钥索引 %d</string>
+    <string name="app_key_name_and_index">名称: %s\n索引: %d</string>
+
+    <string name="action_apply">申请</string>
+    <string name="action_save">保存</string>
+    <string name="action_import">导入</string>
+
+    <string-array name="arr_publication_resolution">
+        <item>100 毫秒</item>
+        <item>1 秒</item>
+        <item>10 秒</item>
+        <item>10 分钟</item>
+    </string-array>
+
+    <string name="hint_publish_ttl">TTL 范围从 0 到 127</string>
+    <string name="hint_publication_steps">发布步骤</string>
+    <string name="model_id">型号ID: %s</string>
+    <string name="title_disconnected_error">错误</string>
+    <string name="disconnected_network_rationale">连接到代理节点进行配置.</string>
+    <string name="remaining_time">剩余时间: %s</string>
+    <string name="generic_level">等级</string>
+    <string name="generic_level_percent">%d%%</string>
+    <string name="title_generic_level_controls">通用级控件</string>
+    <string name="invalid_value">无效值!</string>
+    <string name="use_default_ttl">使用默认ttl值 (0xFF)</string>
+    <string name="uses_default_ttl">使用默认 ttl (0xFF)</string>
+    <string name="action_import_network">导入</string>
+    <string name="action_export_network">导出</string>
+    <string name="title_network_import">导入网络</string>
+    <string name="title_network_export">导出网络</string>
+    <string name="network_import_rationale">导入新的网状网络信息将从应用程序中删除现有的网络信息.你想继续吗? \n\n注意：您也可以在导入之前导出现有的网络信息.</string>
+    <string name="title_permission_required">需要许可</string>
+    <string name="external_storage_permission_required">将网格网络信息导出到外部存储目录中的文件需要权限访问外部存储器.</string>
+    <string name="permission_rationale_settings"> 您可以通过导航到应用程序设置来授予此权限.</string>
+    <string name="settings">设置</string>
+    <string name="ext_storage_permission_denied">无法导出网络，外部存储权限被拒绝!</string>
+    <string name="title_init_config_error">初始配置失败</string>
+    <string name="provisioner_unassigned_msg">无法配置节点，请为配置程序分配一个地址以继续配置.</string>
+    <string name="init_config_error_net_transmit_msg">节点的初始配置失败.
+        继续以下步骤配置节点\n\n
+        步骤 1. 连接到网络.\n\n
+        步骤 2. 单击节点.\n\n
+        步骤 3. 打开配置服务器设置.\n\n
+        步骤 4. 将“传输计数”设置为3，将“传输间隔”设置为20毫秒.</string>
+    <string name="init_config_error_default_ttl_get_msg">节点的初始配置失败.
+        继续以下步骤配置节点\n\n
+        步骤 1. 连接到网络.\n\n
+        步骤 2. 单击节点.\n\n
+        步骤 3. 获取默认TTL</string>
+    <string name="init_config_error_app_key_msg">节点的初始配置失败.
+        继续以下步骤配置节点\n\n
+        步骤 1. 连接到网络.\n\n
+        步骤 2. 单击节点.\n\n
+        步骤 3. 添加应用程序密钥</string>
+    <string name="init_config_error_all">节点的初始配置失败.
+        继续以下步骤配置节点\n\n
+        步骤 1. 连接到网络.\n\n
+        步骤 2. 单击节点.\n\n
+        步骤 3. 单击“获取合成数据”\n\n
+        步骤 4. 获取默认 TTL\n\n
+        步骤 5. 添加应用程序密钥</string>
+    <string name="network_transmit_interval_steps_summary">10 毫秒间隔</string>
+    <string name="please_connect_to_network">请连接到网络以控制设备!</string>
+    <string name="action_edit">边境</string>
+    <string name="generate_uuid">UUID生成标签</string>
+    <string name="publish_address_dialog_summary">发布地址.</string>
+    <string name="subscription_address_dialog_summary">订阅地址.</string>
+    <string name="label_uuid_summary">UUID标签:</string>
+    <string name="label_uuid">UUID标签</string>
+    <string name="name">名称</string>
+    <string name="action_add_app_key">添加应用程序密钥</string>
+    <string name="action_add_sub_net_key">添加子网密钥</string>
+    <string name="hint_delete_key">提示：轻扫可删除密钥.</string>
+    <string name="title_error">错误</string>
+    <string name="not_assigned">未分配</string>
+    <string name="action_resolve">解决</string>
+    <string name="first_scene">首个场景</string>
+    <string name="last_scene">最后场景</string>
+    <string name="automatic">自动</string>
+    <string name="action_unassign">取消分配</string>
+    <string name="address_unassigned">未分配</string>
+    <string name="action_add_node">添加节点</string>
+    <string name="action_create_group">创建新群组</string>
+    <string name="title_unassign_provisioner">取消分配供应器</string>
+    <string name="summary_unassign_provisioner">取消分配供应器将禁用其配置功能并删除相应的节点.</string>
+    <string name="virtual_address">虚拟地址</string>
+    <string name="no_allocated_group_range">请为供应器分配一个组地址范围.</string>
+    <string name="title_details">细节</string>
+    <string name="more">更多</string>
+    <string name="title_delete_node">移除节点</string>
+    <string name="delete_node_rationale">手动删除节点不会重置该节点，将从节点列表中删除.你想继续吗? \n此步骤无法撤消，必须手动重置节点.</string>
+    <string name="node_deleted">节点已经被删除.</string>
+    <string name="interval">Interval</string>
+    <string name="adding_net_key">新增网络关键字…</string>
+    <string name="deleting_net_key">删除网络关键字…</string>
+    <string name="adding_app_key">新增应用程序关键字…</string>
+    <string name="deleting_app_key">删除应用程序关键字…</string>
+    <string name="operation_success">操作成功.</string>
+    <string name="listing_model_configuration">列表模型配置…</string>
+    <string name="title_sig_model_subscription_list">SIG模型订阅列表</string>
+    <string name="title_vendor_model_subscription_list">供应商模型订阅列表</string>
+    <string name="title_sig_model_app_list">SIG 模型应用程序列表</string>
+    <string name="title_vendor_model_app_list">供应商模型应用程序列表</string>
+    <string name="title_subscription_status">订阅状态</string>
+    <string name="set_as_current_provisioner">设为当前配置器</string>
+    <string name="title_error_network_import">导入错误</string>
+</resources>
